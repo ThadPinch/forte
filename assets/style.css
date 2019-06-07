@@ -644,27 +644,35 @@ z-index: 2;
 } */
 
 #solutions .header {
-  background-color: #8bacd7;
+  /* background-color: #8bacd7; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
   height: 50px;
   overflow: visible;
+  position: relative;
 }
 
 #solutions .header img {
-  height: 409px;
+  height: auto;
+  position: relative;
+  z-index: 3;
+  margin-left: -3px;
 }
 
 #solutions .header .word {
+  margin-left: -4px;
   color: #ffffff;
+  background-color: #8bacd7;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  z-index: 2;
   width: 100%;
-  /* letter-spacing: 3em; */
+  height: 100%;
 }
 
 #solutions .header .word span {
@@ -685,13 +693,15 @@ z-index: 2;
   margin: auto;
   text-align: center;
   font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
   font-weight: bolder;
   color: #ffffff;
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .goforte {
@@ -712,6 +722,14 @@ z-index: 2;
 
 .parts-labor {
   background-color: #dc5e56;
+}
+
+#portal {
+  background-image: url('../images/portal-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 201px;
 }
 
 footer {
