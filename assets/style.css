@@ -364,6 +364,28 @@ textarea {
 
 /* End of Reset */
 
+/* 14px @ 480px increasing to 19px @ 1280px & 24px @ 1600px */
+@media (min-width: 480px) {
+  :root {
+    font-size: calc(0.875rem + ((1vw - 4.8px) * 0.625));
+    /* Where: * 0.625 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    font-size: calc(1.1875rem + ((1vw - 12.8px) * 1.5625));
+    /* Where: * 1.5625 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+}
+
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1600px) {
+  :root {
+    font-size: 24px;
+  }
+}
+
 :root {
 	--main-blue: #2987c8;
   --main-grey: #5f6774;
@@ -371,7 +393,7 @@ textarea {
 
 /* Typography */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap'); */
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Raleway', sans-serif;
@@ -524,23 +546,30 @@ z-index: 2;
 }
 
 #company {
-  padding: 10% 0 10% 10%;
+  /* padding: 10% 0 10% 10%; */
   background-color: #e2e0e0;
   margin-top: -30px;
   z-index: 3;
   position: relative;
+  overflow: hidden;
   /* height: 100vh; */
 }
 
-#company h2 {
+.company-left {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.company-left h2 {
   text-transform: uppercase;
   color: var(--main-blue);
   font-weight: bolder;
   font-size: 18px;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
-#company p {
+.company-left p {
   color: var(--main-grey);
   max-width: 50%;
   position: relative;
@@ -552,13 +581,53 @@ z-index: 2;
   transform: skew(0, -45deg);
   background-color: var(--main-blue);
   text-align: right;
-  padding: 20px 0;
   position: relative;
-  z-index: 4;
-  /* height: 50vh; */
-  /* margin-top: -75vh; */
+  margin-top: 12%;
 }
 
+#company-blue::after {
+  content: '';
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  /* position: absolute; */
+  top: 0;
+}
+
+.company-right {
+  text-align: right;
+  position: relative;
+  z-index: 10000;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  padding: 30px;
+  max-width: 1100px;
+  transform: skew(0, 45deg);
+  margin: auto;
+}
+
+.company-right h2 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align:right;
+}
+
+.company-right p {
+  color: #ffffff;
+  margin-right:0;
+  text-align:right;
+  max-width: 50%;
+}
+
+.right {
+  max-width: 100%;
+}
+
+/*
 #company-blue h2 {
   transform: skew(0, 45deg);
   text-transform: uppercase;
@@ -571,8 +640,78 @@ z-index: 2;
 #company-blue p {
   transform: skew(0, 45deg);
   color: #ffffff;
-  /* max-width: 50%; */
   margin-right:0;
+} */
+
+#solutions .header {
+  background-color: #8bacd7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 50px;
+  overflow: visible;
+}
+
+#solutions .header img {
+  height: 409px;
+}
+
+#solutions .header .word {
+  color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* letter-spacing: 3em; */
+}
+
+#solutions .header .word span {
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.options {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.options div {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+  height: 200px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.goforte {
+  background-color: #e8a842;
+}
+
+.fulfillments {
+  background-color: #8ab253;
+}
+
+.vin-pictures {
+  background-color: var(--main-blue);
+}
+
+.services {
+  background-color: var(--main-grey);
+}
+
+.parts-labor {
+  background-color: #dc5e56;
 }
 
 footer {
@@ -583,6 +722,12 @@ footer {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
+}
+
+footer ul li {
+  margin: 5px 0;
+  font-weight: bolder;
+  font-size: .8rem;
 }
 
 footer a {
