@@ -4,8 +4,9 @@ $(document).ready(function() {
     this.classList.toggle('active');
   })
 
-  $(".hamburgler").click(function(){
-    $('.mobile-nav').slideToggle();
+  $(".hamburger").click(function(){
+    // $('.mobile-nav').slideToggle();
+    $('.mobile-nav').animate({width: 'toggle'}, 400);
   })
 
 
