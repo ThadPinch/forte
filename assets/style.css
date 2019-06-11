@@ -1030,9 +1030,16 @@ footer a {
   position: relative;
   z-index: 4;
   margin-top: 12%;
+  padding-bottom: 5%;
 }
 .company-right {
   transform: skew(0);
+}
+.company-left p {
+  max-width: 80%;
+}
+.company-right p {
+  max-width: 80%;
 }
 #company {
   margin-top: 0;
@@ -1040,6 +1047,9 @@ footer a {
 /* .grey-grad {
   min-height: 120vh;
 } */
+.blue-spacer {
+  display: none;
+}
 }
 
 @media only screen and (min-width: 1200px){
