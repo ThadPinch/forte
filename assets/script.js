@@ -5,10 +5,10 @@ $(document).ready(function() {
   })
 
   $(".hamburger").click(function() {
-    // $('.mobile-nav').slideToggle();
-    $('.mobile-nav').animate({
-      width: 'toggle'
-    }, 400);
+    $('.mobile-nav').slideToggle();
+    // $('.mobile-nav').animate({
+    //   width: 'toggle'
+    // }, 400);
   })
 
   //
@@ -20,38 +20,104 @@ $(document).ready(function() {
 
 
   $(".goforte").click(function() {
-    $(".solutions-text div").each(function() {
-      $(this).hide();
-    })
-    $('.goforte-text').fadeIn("slow", function() {});
+    if($('.goforte-text').css("display") == 'none') {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+      $('.goforte-text').slideDown("slow", function() {});
+      // $('.goforte-text').css("display") == 'flex';
+      $('.goforte').addClass('arrowdown');
+    } else {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+    }
   })
 
   $(".fulfillments").click(function() {
-    $(".solutions-text div").each(function() {
-      $(this).hide();
-    })
-    $('.fulfillments-text').fadeIn("slow", function() {});
+    if($('.fulfillments-text').css("display") == 'none') {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+        $(this).slideUp("slow", function() {});
+      });
+      $('.fulfillments-text').slideDown("slow", function() {});
+      $('.fulfillments').addClass('arrowdown');
+    } else {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+  }
   })
 
   $(".vin-pictures").click(function() {
-    $(".solutions-text div").each(function() {
-      $(this).hide();
-    })
-    $('.vin-pictures-text').fadeIn("slow", function() {});
+    if($('.vin-pictures-text').css("display") == 'none') {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+        $(this).slideUp("slow", function() {});
+      });
+      $('.vin-pictures-text').slideDown("slow", function() {});
+      $('.vin-pictures').addClass('arrowdown');
+    } else {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+  };
   })
 
   $(".services").click(function() {
-    $(".solutions-text div").each(function() {
-      $(this).hide();
-    })
-    $('.services-text').fadeIn("slow", function() {});
+    if($('.services-text').css("display") == 'none') {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+        $(this).slideUp("slow", function() {});
+      });
+      $('.services-text').slideDown("slow", function() {});
+      $('.services').addClass('arrowdown');
+    } else {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+  };
   })
 
   $(".parts-labor").click(function() {
-    $(".solutions-text div").each(function() {
-      $(this).hide();
-    })
-    $('.parts-labor-text').fadeIn("slow", function() {});
+    if($('.parts-labor-text').css("display") == 'none') {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+        $(this).slideUp("slow", function() {});
+      });
+      $('.parts-labor-text').slideDown("slow", function() {});
+      $('.parts-labor').addClass('arrowdown');
+    } else {
+      $(".options div").each(function() {
+        $(this).removeClass('arrowdown');
+      });
+      $(".solutions-text div").each(function() {
+      $(this).slideUp("slow", function() {});
+    });
+  };
   })
 
 
