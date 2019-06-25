@@ -20,15 +20,20 @@ if ($_POST) {
 
   if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
     $formerr = 'Form submission not valid due to first name.';
+    $formstyle = 'fail';
   }
   elseif (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
     $formerr = 'Form submission not valid due to last name.';
+    $formstyle = 'fail';
   }
   elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $formerr = 'Form submission not valid due to email.';
+    $formstyle = 'fail';
   } else {
 
     mail($to, $subject, $messagebody, $header);
+    $formerr = 'Thank you for your submission! We will get back to you as quickly as possible.';
+    $formstyle = 'success';
 
   }
 
@@ -145,7 +150,7 @@ if ($_POST) {
 
   </div>
 
-    <h2 style="margin: 20px auto; text-align: center; color: red;"><?php echo $formerr; ?></h2>
+    <h2 class="<?php echo $formstyle; ?>" ><?php echo $formerr; ?></h2>
 
   <section id='contact-form'>
 

@@ -1351,6 +1351,18 @@ Original Background Color
   box-shadow: 6px 6px #565656;
 }
 
+.fail {
+  margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+
+.success {
+  margin: 20px auto;
+  text-align: center;
+  color: green;
+}
+
 #map {
   width: 100%;
 }
