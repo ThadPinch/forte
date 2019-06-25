@@ -1045,6 +1045,7 @@ Original Background Color
   transform: translate(0, -6.7rem);
   transition: ease-in-out .3s all;
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-1:hover {
@@ -1056,7 +1057,7 @@ Original Background Color
 #portal .main .portal-2 {
   cursor: pointer;
   transform: translate(5.2rem, -4.3rem);
-  /* transform: translate(-5.2rem, -4.3rem); */
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-2:hover {
@@ -1068,6 +1069,7 @@ Original Background Color
 #portal .main .portal-3 {
   cursor: pointer;
   transform: translate(7.8rem, .5rem);
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-3:hover {
@@ -1079,6 +1081,7 @@ Original Background Color
 #portal .main .portal-4 {
   transform: translate(6.4rem, 5.6rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-4:hover {
@@ -1090,6 +1093,7 @@ Original Background Color
 #portal .main .portal-5 {
   transform: translate(2.4rem, 9rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-5:hover {
@@ -1101,6 +1105,7 @@ Original Background Color
 #portal .main .portal-6 {
   transform: translate(-2.4rem, 9rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-6:hover {
@@ -1112,6 +1117,7 @@ Original Background Color
 #portal .main .portal-7 {
   transform: translate(-6.4rem, 5.6rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-7:hover {
@@ -1123,6 +1129,7 @@ Original Background Color
 #portal .main .portal-8 {
   transform: translate(-7.8rem, .5rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-8:hover {
@@ -1134,6 +1141,7 @@ Original Background Color
 #portal .main .portal-9 {
   transform: translate(-5.2rem, -4.3rem);
   cursor: pointer;
+  box-shadow: 0 0 0 #565656;
 }
 
 #portal .main .portal-9:hover {
@@ -1163,10 +1171,12 @@ Original Background Color
 }
 
 .login p {
-  color: var(--main-grey);
+  color: #565656;
+  /* color: var(--main-grey); */
   margin: 2rem 0;
   text-transform: uppercase;
   letter-spacing: .2em;
+  font-size: 1rem;
 }
 
 .login.mobile-view p {
@@ -1528,6 +1538,9 @@ footer a {
   }
   .mobile-view {
     display: block;
+  }
+  #portal .login {
+    margin: 1rem 0;
   }
   .desktop-view {
     display: none;
