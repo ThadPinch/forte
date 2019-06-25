@@ -241,7 +241,7 @@ if ($_POST) {
 
       <label for="message">Message</label>
 
-      <textarea name="message"></textarea>
+      <textarea name="message"></textarea required>
 
       <input type="submit" name="submit" value="Submit">
 
