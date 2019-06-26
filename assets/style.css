@@ -798,6 +798,7 @@ nav ul span {
 
 #solutions .header img {
   height: auto;
+  max-width: 275px;
   position: relative;
   z-index: 3;
   margin-left: -3px;
@@ -875,6 +876,13 @@ nav ul span {
 .goforte {
   background-color: #e8a842;
   position: relative;
+  transition: ease-in-out .2s all;
+}
+
+.goforte:hover {
+  /* background-color: #f4d142; */
+  /* box-shadow: 0px -.4rem 4px #565656; */
+  transform: translate(0rem, -.4rem);
 }
 
 .goforte.arrowdown::after {
@@ -890,6 +898,12 @@ nav ul span {
 .fulfillments {
   background-color: #8ab253;
   position: relative;
+  transition: ease-in-out .2s all;
+}
+
+.fulfillments:hover {
+  /* box-shadow: -10px 40px 4px #565656; */
+  transform: translate(0rem, -.4rem);
 }
 
 .fulfillments.arrowdown::after {
@@ -905,6 +919,12 @@ nav ul span {
 .vin-pictures {
   background-color: var(--main-blue);
   position: relative;
+  transition: ease-in-out .2s all;
+}
+
+.vin-pictures:hover {
+  /* box-shadow: -10px 40px 4px #565656; */
+  transform: translate(0rem, -.4rem);
 }
 
 .vin-pictures.arrowdown::after {
@@ -920,17 +940,13 @@ nav ul span {
 .services {
   background-color: var(--main-grey);
   position: relative;
+  transition: ease-in-out .2s all;
 }
 
-/* .services::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  margin-bottom: -120px;
-  border-left: 120px solid transparent;
-  border-right: 120px solid transparent;
-  border-top: 120px solid var(--main-grey);
-} */
+.services:hover {
+  /* box-shadow: -10px 40px 4px #565656; */
+  transform: translate(0rem, -.4rem);
+}
 
 .services.arrowdown::after {
   content: " ";
@@ -946,6 +962,12 @@ nav ul span {
 .parts-labor {
   background-color: #dc5e56;
   position: relative;
+  transition: ease-in-out .2s all;
+}
+
+.parts-labor:hover {
+  /* box-shadow: -10px 40px 4px #565656; */
+  transform: translate(0rem, -.4rem);
 }
 
 .parts-labor.arrowdown::after {
