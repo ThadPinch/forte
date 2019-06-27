@@ -439,6 +439,17 @@ nav {
   background-color: rgba(255, 255, 255, .7);
   padding: 20px;
   z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-bottom: 30px;
+  max-height: 88px;
+}
+
+.nav-standin {
+  /* background-color: rgba(255, 255, 255, .7); */
+  padding: 45px 0;
+  z-index: 999;
   position: relative;
   margin-bottom: 30px;
   max-height: 88px;
@@ -801,11 +812,19 @@ nav ul span {
   max-width: 275px;
   position: relative;
   z-index: 3;
-  margin-left: -3px;
+  margin-left: -5px;
+}
+
+#solutions .header .spacer {
+  height: 100%;
+  background-color: #8bacd7;
+  color: #8bacd7;
+  content: '    ';
 }
 
 #solutions .header .word {
   margin-left: -4px;
+  padding: 0 12% 0 0;
   color: #ffffff;
   background-color: #8bacd7;
   display: flex;
@@ -1425,15 +1444,137 @@ Original Background Color
 
 /* End Contact Styling */
 
+/* Some Solutions Styling */
+
+#some-solutions {
+  padding: 5%;
+  background-color: var(--main-grey);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#some-solutions h2 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#some-solutions .some-solutions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* max-width: 1400px; */
+  width: 85%;
+}
+
+.sol-1, .sol-2, .sol-3 {
+  max-width: 400px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 5% 0;
+  padding: 2rem 1rem 1rem 1rem;
+  min-height: 125px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0 #565656;
+}
+
+.some-solutions h5 {
+  font-weight: bolder;
+}
+
+.sol-1 i, .sol-2 i, .sol-3 i {
+  color: #FFFFFF;
+  background-color: rgba(66,66,66,.66);
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+@keyframes sol-1 {
+  0% {
+    box-shadow: 0px 0px 0 #FFFFFF;
+  }
+  50% {
+    box-shadow: 100px 0px 0 #FFFFFF;
+  }
+  100% {
+    box-shadow: 0px 0px 0 #FFFFFF;
+  }
+}
+
+.sol-1 {
+  animation: sol-1 10s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes sol-2 {
+  0% {
+    border-radius: 15px;
+  }
+  50% {
+    border-radius: 50px;
+  }
+  100% {
+    border-radius: 15px;
+  }
+}
+
+.sol-2 {
+  animation: sol-2 10s infinite;
+  animation-timing-function: ease;
+  position: relative;
+  z-index: 1000;
+}
+
+@keyframes sol-3 {
+  0% {
+    box-shadow: 0px 0px 0 #FFFFFF;
+  }
+  50% {
+    box-shadow: -100px 0px 0 #FFFFFF;
+  }
+  100% {
+    box-shadow: 0px 0px 0 #FFFFFF;
+  }
+}
+
+.sol-3 {
+  animation: sol-3 10s infinite;
+  animation-timing-function: ease;
+  position: relative;
+  z-index: 999;
+}
+
+/* End Some Solutions Styling */
+
 /* Footer styling */
 footer {
-  background-color: var(--main-blue);
+  background-color: #797979;
   position: relative;
   z-index: 1000;
   padding: 40px;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
+  box-shadow: 0 4px 15px #565656;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer h5 {
+  text-align: center;
 }
 
 footer ul li {
@@ -1450,18 +1591,33 @@ footer a {
 }
 
 .footer-bottom {
-  background-color: #ed544f;
+  background-color: var(--main-blue);
   height: 40px;
   width: 100%;
   position: relative;
   z-index: 10000;
 }
 
+.mobile-apps {
+  text-align: center;
+}
+
 /* End Footer styling */
 /* Media Queries */
+
+@media only screen and (max-width: 1757px) {
+  .sol-1, .sol-2, .sol-3 {
+    animation: none;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   #portal .login {
     margin-top: 100px;
+  }
+
+  nav {
+    background-color: #FFFFFF;
   }
 
   nav .reg-nav {
@@ -1473,6 +1629,20 @@ footer a {
   }
 }
 
+@media only screen and (max-width: 1140px) {
+  .sol-1, .sol-2, .sol-3 {
+    min-height: 80px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  footer {
+    flex-flow: column;
+  }
+  footer div {
+    margin: 20px auto;
+  }
+}
 
 @media only screen and (max-width: 760px) {
   #solutions .header img {
@@ -1481,6 +1651,14 @@ footer a {
 
   #solutions .options {
     flex-flow: column;
+  }
+
+  #solutions .header .word {
+    padding: 0 5%;
+  }
+
+  #solutions .header .spacer {
+    display: none;
   }
 
   .arrowdown::after {
