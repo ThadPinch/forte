@@ -11,7 +11,6 @@
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="stylesheet" href="assets/style.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/ef49b27969.js"></script>
 </head>
 
 <body>
@@ -384,11 +383,58 @@
   </div>
 
     <div class="mobile-apps">
+      <div>
       <h5>Our Mobile Apps</h5><br>
-        <img src="images/footer-1.png" alt="">
-        <img src="images/footer-2.png" alt="">
-        <img src="images/footer-3.png" alt="">
+        <img src="images/footer-1.png" alt="Repair ID" onclick="openRepair()">
+        <img src="images/footer-2.png" alt="Numbers" onclick="openNumbers()">
+        <img src="images/footer-3.png" alt="Providers" onclick="openProviders()">
+      </div>
     </div>
+
+    <div class="repair-options" onclick="closeIt()">
+
+      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
+
+      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.android.repairid'">
+
+    </div>
+
+    <div class="numbers-options" onclick="closeIt()">
+
+      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
+
+      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.numbers'">
+
+    </div>
+
+    <div class="providers-options" onclick="closeIt()">
+
+      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/providers/id747426884?mt=8'">
+
+      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.providers'">
+
+    </div>
+
+    <script type="text/javascript">
+        function openRepair() {
+          document.querySelector('.repair-options').style.display = 'flex';
+        }
+
+        function openNumbers() {
+          document.querySelector('.numbers-options').style.display = 'flex';
+        }
+
+        function openProviders() {
+          document.querySelector('.providers-options').style.display = 'flex';
+        }
+
+        function closeIt() {
+          document.querySelector('.repair-options').style.display = 'none';
+          document.querySelector('.numbers-options').style.display = 'none';
+          document.querySelector('.providers-options').style.display = 'none';
+        }
+
+    </script>
 
     <div>
 
@@ -399,10 +445,12 @@
 
   </footer>
   <div class="footer-bottom">
-
+    <a href="https://www.facebook.com/fortedatasystems/" ><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.fortedata.com%2Fcompany%2Findex.php&region=follow_link&screen_name=goforte&tw_p=followbutton&variant=2.0" ><i class="fab fa-twitter"></i></a>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>
+  <script src="https://kit.fontawesome.com/ef49b27969.js"></script>
 </body>
 
 </html>
