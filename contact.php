@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 if ($_POST) {
 
@@ -13,10 +13,10 @@ if ($_POST) {
   $lname = test_input($_POST['lastname']);
   $email = test_input($_POST['email']);
   $message = test_input($_POST['message']);
-  $messagebody = 'You have a new message from: ' . $fname . ' ' . $lname . '\n Email: ' . $email . '\n Message: \n \n' . $message;
+  $messagebody = 'You have a new message from: ' . $fname . ' ' . $lname . PHP_EOL . 'Email: ' . $email . PHP_EOL . 'Message:' . PHP_EOL . $message;
   $subject = 'The website contact form has been submitted';
-  $to = 'thadpinch@gmail.com';
-  $header = 'From: donotreply@fortedata.com';
+  $to = '';
+  $headers = 'From: donotreply@fortedata.com';
 
   if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
     $formerr = 'Form submission not valid due to first name.';
@@ -31,9 +31,12 @@ if ($_POST) {
     $formstyle = 'fail';
   } else {
 
-    mail($to, $subject, $messagebody, $header);
+    if(mail($to, $subject, $messagebody, $headers)) {
+      mail($to, $subject, $messagebody, $headers);
     $formerr = 'Thank you for your submission! We will get back to you as quickly as possible.';
     $formstyle = 'success';
+    } else {
+    };
 
   }
 
@@ -42,9 +45,8 @@ if ($_POST) {
 }
 
 
-
 ?>
- -->
+
 
 
 
@@ -254,80 +256,80 @@ if ($_POST) {
 
   </section>
 
-  <footer>
+    <footer>
 
-    <div>
-    <ul>
-      <li>3330 Paddocks Parkway,</li>
-      <li>Johns Creek GA 30024</li>
-      <li><a href="mailto:sales@fortedata.com">sales@fortedata.com</a></li>
-      <li><a href="https://www.fortedata.com">www.fortedata.com</a></li>
-      <li><a href="tel:8005718702">800-571-8702</a></li>
-    </ul>
-  </div>
-
-    <div class="mobile-apps">
       <div>
-      <h5>Our Mobile Apps</h5><br>
-        <img src="images/footer-1.png" alt="Repair ID" onclick="openRepair()">
-        <img src="images/footer-2.png" alt="Numbers" onclick="openNumbers()">
-        <img src="images/footer-3.png" alt="Providers" onclick="openProviders()">
+      <ul>
+        <li>3330 Paddocks Parkway,</li>
+        <li>Johns Creek GA 30024</li>
+        <li><a href="mailto:sales@fortedata.com">sales@fortedata.com</a></li>
+        <li><a href="https://www.fortedata.com">www.fortedata.com</a></li>
+        <li><a href="tel:8005718702">800-571-8702</a></li>
+      </ul>
+    </div>
+
+      <div class="mobile-apps">
+        <div>
+        <h5>Our Mobile Apps</h5><br>
+          <img src="images/footer-1.png" alt="Repair ID" onclick="openRepair()">
+          <img src="images/footer-2.png" alt="Numbers" onclick="openNumbers()">
+          <img src="images/footer-3.png" alt="Providers" onclick="openProviders()">
+        </div>
       </div>
-    </div>
 
-    <div class="repair-options" onclick="closeIt()">
+      <div class="repair-options" onclick="closeIt()">
 
-      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
+        <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
 
-      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.android.repairid'">
+        <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.android.repairid'">
 
-    </div>
+      </div>
 
-    <div class="numbers-options" onclick="closeIt()">
+      <div class="numbers-options" onclick="closeIt()">
 
-      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
+        <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/fortenumbers/id763539491?mt=8'">
 
-      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.numbers'">
+        <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.numbers'">
 
-    </div>
+      </div>
 
-    <div class="providers-options" onclick="closeIt()">
+      <div class="providers-options" onclick="closeIt()">
 
-      <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/providers/id747426884?mt=8'">
+        <img src="images/ioslogo.png" alt="iPhone" onclick="parent.location.href='https://itunes.apple.com/us/app/providers/id747426884?mt=8'">
 
-      <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.providers'">
+        <img src="images/androidicon.png" alt="Android" onclick="parent.location.href='https://play.google.com/store/apps/details?id=com.fds.providers'">
 
-    </div>
+      </div>
 
-    <script type="text/javascript">
-        function openRepair() {
-          document.querySelector('.repair-options').style.display = 'flex';
-        }
+      <script type="text/javascript">
+          function openRepair() {
+            document.querySelector('.repair-options').style.display = 'flex';
+          }
 
-        function openNumbers() {
-          document.querySelector('.numbers-options').style.display = 'flex';
-        }
+          function openNumbers() {
+            document.querySelector('.numbers-options').style.display = 'flex';
+          }
 
-        function openProviders() {
-          document.querySelector('.providers-options').style.display = 'flex';
-        }
+          function openProviders() {
+            document.querySelector('.providers-options').style.display = 'flex';
+          }
 
-        function closeIt() {
-          document.querySelector('.repair-options').style.display = 'none';
-          document.querySelector('.numbers-options').style.display = 'none';
-          document.querySelector('.providers-options').style.display = 'none';
-        }
+          function closeIt() {
+            document.querySelector('.repair-options').style.display = 'none';
+            document.querySelector('.numbers-options').style.display = 'none';
+            document.querySelector('.providers-options').style.display = 'none';
+          }
 
-    </script>
+      </script>
 
-    <div>
+      <div>
 
-      <h5>Download GoForté</h5><br>
-      <img src="images/footer-5.png" style="max-height: 73px;" alt="goforte">
+        <h5>Download GoForté</h5><br>
+        <a href="https://www.fortedata.com/newForte/installation.html"><img src="images/footer-5.png" style="max-height: 73px;" alt="goforte"></a>
 
-    </div>
+      </div>
 
-  </footer>
+    </footer>
   <div class="footer-bottom">
     <a href="https://www.facebook.com/fortedatasystems/" ><i class="fab fa-facebook-f"></i></a>
     <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.fortedata.com%2Fcompany%2Findex.php&region=follow_link&screen_name=goforte&tw_p=followbutton&variant=2.0" ><i class="fab fa-twitter"></i></a>

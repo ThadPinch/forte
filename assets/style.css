@@ -633,8 +633,9 @@ nav ul span {
   align-items: center;
   top: 0;
   z-index: 3;
-  height: 55vh;
-  min-height: 600px;
+  min-height: 550px;
+  max-height: 550px;
+  height: 65vh;
 }
 
 .grey-grad {
@@ -666,12 +667,7 @@ nav ul span {
   min-height: 550px;
   margin: auto;
   padding: 30px 40px 30px 30px;
-  /* box-shadow: 0px 0px 28px #565656; */
   box-shadow: inset 0px 0px 28px #565656;
-  /* display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center; */
 }
 
 .top-bg img {
@@ -682,11 +678,10 @@ nav ul span {
 }
 
 .white-box h2 {
-  /* font-size: 20px; */
   font-weight: bolder;
   position: absolute;
   bottom: 0;
-  margin-bottom: 9%;
+  margin-bottom: 10%;
   max-width: 90%;
 }
 
@@ -1506,7 +1501,7 @@ Original Background Color
     box-shadow: 0px 0px 0 #FFFFFF;
   }
   50% {
-    box-shadow: 100px 0px 0 #FFFFFF;
+    box-shadow: 280px 0px 0 #FFFFFF;
   }
   100% {
     box-shadow: 0px 0px 0 #FFFFFF;
@@ -1542,7 +1537,7 @@ Original Background Color
     box-shadow: 0px 0px 0 #FFFFFF;
   }
   50% {
-    box-shadow: -100px 0px 0 #FFFFFF;
+    box-shadow: -280px 0px 0 #FFFFFF;
   }
   100% {
     box-shadow: 0px 0px 0 #FFFFFF;
@@ -1628,7 +1623,7 @@ footer a {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(0,0,0,0.65);
 }
 
 /* .repair-options a, .numbers-options a, .providers-options a {
@@ -1722,7 +1717,7 @@ footer a {
     bottom: 0;
     margin-bottom: 13%;
     max-width: 90%;
-    text-shadow: 3px 3px 2px #ffffff;
+    /* text-shadow: 3px 3px 2px #ffffff; */
   }
 
   .white-box p {
@@ -1730,7 +1725,7 @@ footer a {
     bottom: 0;
     margin-bottom: 5%;
     max-width: 90%;
-    text-shadow: 3px 3px 2px #ffffff;
+    /* text-shadow: 3px 3px 2px #ffffff; */
   }
 
   #company-blue {
